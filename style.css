@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.search-container {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    position: relative;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.suggestions {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    display: none; /* Only show when there are suggestions */
+}
+
+.results-container {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.results-list {
+    list-style: none;
+}
+
+.result-item {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.result-item a {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.result-item p {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search-container, .results-container {
+        width: 95%;
+    }
+
+    .search-bar, .search-btn {
+        font-size: 14px;
+    }
+}
